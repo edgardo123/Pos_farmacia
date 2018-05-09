@@ -1,0 +1,28 @@
+﻿@*@model IEnumerable<WebAppPosFarmacia.models.Clientes>*@
+@model WebAppPosFarmacia.viewmodels.ListaClientesViewModel
+
+
+
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-eqquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, inicial-scale=1 />"
+        <title>Listado General de Clientes</title>
+    </head>
+    <body>
+        @*foreach (var Clientes in Model)*@
+        <h1>@Model.CiudadCliente</h1>
+        @foreach (var Clientes in Model.Clientes)
+        {
+            <div>
+                <h2>@Clientes.IdCliente</h2>
+                <h3>@Clientes.NombreCliente</h3>
+                <h4>@Clientes.CodigoCiudad</h4>
+
+            </div>
+
+        }
+        </body>
+        </html>

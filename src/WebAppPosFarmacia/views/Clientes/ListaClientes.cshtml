@@ -1,0 +1,40 @@
+﻿@model ListaClientesViewModel
+    
+<center>
+    <h1>@Model.CiudadCliente</h1>
+    <table border="1">
+
+        <tr align="center">
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Genero</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Codigo Ciudad</th>
+
+
+
+        </tr>
+        @foreach (var Clientes in Model.Clientes)
+        {
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div>
+
+
+                    <tr align="center">
+                        <td>@Clientes.IdCliente</td>
+                        <td><a>@Clientes.NombreCliente</a></td>
+                        <td><a>@Clientes.ApellidoCliente</a></td>
+                        <td><a>@Clientes.GeneroCliente</a></td>
+                        <td><a>@Clientes.TelefonoCliente</a></td>
+                        <td><a>@Clientes.EmailCliente</a></td>
+                        <td><a>@Clientes.CodigoCiudad</a></td>
+                    </tr>
+
+
+                </div>
+            </div>
+        }
+    </table>
+</center>
